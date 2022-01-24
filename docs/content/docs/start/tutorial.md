@@ -59,7 +59,7 @@ const createNewDice = async () => {
     // Set default data
     container.initialObjects.diceMap.set("dice-value-key", 1);
     // Attach container to service and return assigned ID
-    const id = container.attach();
+    const id = await container.attach();
     // load the dice roller
     renderDiceRoller(container.initialObjects.diceMap, root);
     return id;
